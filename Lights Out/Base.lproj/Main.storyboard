@@ -58,108 +58,394 @@
                                         <rect key="frame" x="167" y="169" width="500" height="700"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahg-J0-eOv" userLabel="Button 1">
-                                                <rect key="frame" x="50" y="600" width="50" height="50"/>
+                                                <rect key="frame" x="50" y="600" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="I5o-r5-MKy"/>
-                                                    <constraint firstAttribute="height" constant="50" id="Lra-Z1-miC"/>
+                                                    <constraint firstAttribute="width" constant="50" id="6Zk-iS-HP7"/>
+                                                    <constraint firstAttribute="height" constant="50" id="LIp-NJ-oKj"/>
+                                                    <constraint firstAttribute="width" constant="100" id="acc-9O-NRq"/>
+                                                    <constraint firstAttribute="height" constant="100" id="tp8-3a-rXF"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="6Zk-iS-HP7"/>
+                                                        <exclude reference="LIp-NJ-oKj"/>
+                                                        <exclude reference="acc-9O-NRq"/>
+                                                        <exclude reference="tp8-3a-rXF"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="6Zk-iS-HP7"/>
+                                                        <include reference="LIp-NJ-oKj"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="acc-9O-NRq"/>
+                                                        <include reference="tp8-3a-rXF"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-AK-HwJ" userLabel="Button 2">
-                                                <rect key="frame" x="50" y="480" width="50" height="50"/>
+                                                <rect key="frame" x="50" y="480" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="ACA-6c-pTK"/>
-                                                    <constraint firstAttribute="width" constant="50" id="c89-a3-cvz"/>
+                                                    <constraint firstAttribute="width" constant="100" id="6eU-LG-mOp"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Uho-Rn-NTe"/>
+                                                    <constraint firstAttribute="width" constant="50" id="d3v-8b-tl1"/>
+                                                    <constraint firstAttribute="height" constant="100" id="zoh-pr-9hz"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="6eU-LG-mOp"/>
+                                                        <exclude reference="Uho-Rn-NTe"/>
+                                                        <exclude reference="d3v-8b-tl1"/>
+                                                        <exclude reference="zoh-pr-9hz"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="Uho-Rn-NTe"/>
+                                                        <include reference="d3v-8b-tl1"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="6eU-LG-mOp"/>
+                                                        <include reference="zoh-pr-9hz"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts1-t1-bvD" userLabel="Button 3">
-                                                <rect key="frame" x="50" y="360" width="50" height="50"/>
+                                                <rect key="frame" x="50" y="360" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="G4N-BL-fgd"/>
-                                                    <constraint firstAttribute="height" constant="50" id="vdQ-jZ-6j4"/>
+                                                    <constraint firstAttribute="width" constant="100" id="72M-lf-Qcf"/>
+                                                    <constraint firstAttribute="height" constant="100" id="ZnB-C8-BPc"/>
+                                                    <constraint firstAttribute="width" constant="50" id="p19-HY-KtY"/>
+                                                    <constraint firstAttribute="height" constant="50" id="yeO-yo-5PX"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="72M-lf-Qcf"/>
+                                                        <exclude reference="ZnB-C8-BPc"/>
+                                                        <exclude reference="p19-HY-KtY"/>
+                                                        <exclude reference="yeO-yo-5PX"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="p19-HY-KtY"/>
+                                                        <include reference="yeO-yo-5PX"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="72M-lf-Qcf"/>
+                                                        <include reference="ZnB-C8-BPc"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb6-2A-TRE" userLabel="Button 4">
-                                                <rect key="frame" x="50" y="240" width="50" height="50"/>
+                                                <rect key="frame" x="50" y="240" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="Gbh-3D-jOU"/>
-                                                    <constraint firstAttribute="height" constant="50" id="vVU-un-0bJ"/>
+                                                    <constraint firstAttribute="height" constant="100" id="fZr-Wt-aOG"/>
+                                                    <constraint firstAttribute="width" constant="100" id="htT-qf-hws"/>
+                                                    <constraint firstAttribute="height" constant="50" id="vUB-uL-ABk"/>
+                                                    <constraint firstAttribute="width" constant="50" id="vZj-lv-N17"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="fZr-Wt-aOG"/>
+                                                        <exclude reference="htT-qf-hws"/>
+                                                        <exclude reference="vUB-uL-ABk"/>
+                                                        <exclude reference="vZj-lv-N17"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="vUB-uL-ABk"/>
+                                                        <include reference="vZj-lv-N17"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="fZr-Wt-aOG"/>
+                                                        <include reference="htT-qf-hws"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mi-99-06d" userLabel="Button 5">
-                                                <rect key="frame" x="50" y="120" width="50" height="50"/>
+                                                <rect key="frame" x="50" y="120" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="BCe-LW-bg6"/>
-                                                    <constraint firstAttribute="height" constant="50" id="dar-9l-gxR"/>
+                                                    <constraint firstAttribute="height" constant="100" id="R2Y-lJ-Nfd"/>
+                                                    <constraint firstAttribute="width" constant="50" id="eny-8u-0FZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="fsQ-z1-WuL"/>
+                                                    <constraint firstAttribute="width" constant="100" id="qFQ-Xy-T5T"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="R2Y-lJ-Nfd"/>
+                                                        <exclude reference="eny-8u-0FZ"/>
+                                                        <exclude reference="fsQ-z1-WuL"/>
+                                                        <exclude reference="qFQ-Xy-T5T"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="eny-8u-0FZ"/>
+                                                        <include reference="fsQ-z1-WuL"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="R2Y-lJ-Nfd"/>
+                                                        <include reference="qFQ-Xy-T5T"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q95-h6-wzN" userLabel="Button 6">
-                                                <rect key="frame" x="50" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="50" y="0.0" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="abs-0R-flc"/>
-                                                    <constraint firstAttribute="height" constant="50" id="uXG-Lx-iio"/>
+                                                    <constraint firstAttribute="width" constant="100" id="0wX-CC-ZP6"/>
+                                                    <constraint firstAttribute="height" constant="50" id="BEC-eW-MP5"/>
+                                                    <constraint firstAttribute="width" constant="50" id="KLN-bE-dSv"/>
+                                                    <constraint firstAttribute="height" constant="100" id="WJZ-Ei-dj3"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="0wX-CC-ZP6"/>
+                                                        <exclude reference="BEC-eW-MP5"/>
+                                                        <exclude reference="KLN-bE-dSv"/>
+                                                        <exclude reference="WJZ-Ei-dj3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="BEC-eW-MP5"/>
+                                                        <include reference="KLN-bE-dSv"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="0wX-CC-ZP6"/>
+                                                        <include reference="WJZ-Ei-dj3"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B35-y1-uc8" userLabel="Button 7">
-                                                <rect key="frame" x="185" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="185" y="0.0" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="EIE-82-V1c"/>
-                                                    <constraint firstAttribute="height" constant="50" id="R2k-MU-ysf"/>
+                                                    <constraint firstAttribute="height" constant="100" id="0Jh-mJ-O8E"/>
+                                                    <constraint firstAttribute="width" constant="100" id="Wzw-3Y-dSL"/>
+                                                    <constraint firstAttribute="width" constant="50" id="nTD-Nx-02S"/>
+                                                    <constraint firstAttribute="height" constant="50" id="uEK-UD-teW"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="0Jh-mJ-O8E"/>
+                                                        <exclude reference="Wzw-3Y-dSL"/>
+                                                        <exclude reference="nTD-Nx-02S"/>
+                                                        <exclude reference="uEK-UD-teW"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="nTD-Nx-02S"/>
+                                                        <include reference="uEK-UD-teW"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="0Jh-mJ-O8E"/>
+                                                        <include reference="Wzw-3Y-dSL"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO6-mJ-YWV" userLabel="Button 8">
-                                                <rect key="frame" x="310" y="56" width="50" height="50"/>
+                                                <rect key="frame" x="310" y="56" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="UGc-1Q-Kwl"/>
-                                                    <constraint firstAttribute="width" constant="50" id="mOq-d8-TTr"/>
+                                                    <constraint firstAttribute="width" constant="50" id="KuR-wa-3t3"/>
+                                                    <constraint firstAttribute="width" constant="100" id="QX9-1r-u1f"/>
+                                                    <constraint firstAttribute="height" constant="50" id="e6u-6M-Hm1"/>
+                                                    <constraint firstAttribute="height" constant="100" id="eC3-sZ-tid"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="KuR-wa-3t3"/>
+                                                        <exclude reference="QX9-1r-u1f"/>
+                                                        <exclude reference="e6u-6M-Hm1"/>
+                                                        <exclude reference="eC3-sZ-tid"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="KuR-wa-3t3"/>
+                                                        <include reference="e6u-6M-Hm1"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="QX9-1r-u1f"/>
+                                                        <include reference="eC3-sZ-tid"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-fg-5im" userLabel="Button 9">
-                                                <rect key="frame" x="370" y="180" width="50" height="50"/>
+                                                <rect key="frame" x="370" y="180" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="yUc-1i-PzC"/>
-                                                    <constraint firstAttribute="width" constant="50" id="yeF-y7-BlL"/>
+                                                    <constraint firstAttribute="height" constant="50" id="2WK-8c-hX3"/>
+                                                    <constraint firstAttribute="width" constant="100" id="MuB-ZB-t2V"/>
+                                                    <constraint firstAttribute="width" constant="50" id="jGl-VK-Gxd"/>
+                                                    <constraint firstAttribute="height" constant="100" id="vrr-Km-WBR"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="2WK-8c-hX3"/>
+                                                        <exclude reference="MuB-ZB-t2V"/>
+                                                        <exclude reference="jGl-VK-Gxd"/>
+                                                        <exclude reference="vrr-Km-WBR"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="2WK-8c-hX3"/>
+                                                        <include reference="jGl-VK-Gxd"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="MuB-ZB-t2V"/>
+                                                        <include reference="vrr-Km-WBR"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mJ-hs-iiy" userLabel="Button 10">
-                                                <rect key="frame" x="310" y="304" width="50" height="50"/>
+                                                <rect key="frame" x="310" y="304" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="a18-Ja-VCh"/>
-                                                    <constraint firstAttribute="height" constant="50" id="poG-3Z-sRL"/>
+                                                    <constraint firstAttribute="height" constant="100" id="7G8-8e-qed"/>
+                                                    <constraint firstAttribute="width" constant="100" id="9wC-4t-5eL"/>
+                                                    <constraint firstAttribute="height" constant="50" id="XPR-DE-kR7"/>
+                                                    <constraint firstAttribute="width" constant="50" id="ZfV-PQ-Eue"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="7G8-8e-qed"/>
+                                                        <exclude reference="9wC-4t-5eL"/>
+                                                        <exclude reference="XPR-DE-kR7"/>
+                                                        <exclude reference="ZfV-PQ-Eue"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="XPR-DE-kR7"/>
+                                                        <include reference="ZfV-PQ-Eue"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="7G8-8e-qed"/>
+                                                        <include reference="9wC-4t-5eL"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-ht-y5v" userLabel="Button 11">
-                                                <rect key="frame" x="190" y="360" width="50" height="50"/>
+                                                <rect key="frame" x="190" y="360" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="SZW-VO-cHS"/>
-                                                    <constraint firstAttribute="width" constant="50" id="tet-6I-oCG"/>
+                                                    <constraint firstAttribute="width" constant="100" id="1Li-3s-h5r"/>
+                                                    <constraint firstAttribute="width" constant="50" id="R36-mD-buS"/>
+                                                    <constraint firstAttribute="height" constant="100" id="icg-Z3-LSH"/>
+                                                    <constraint firstAttribute="height" constant="50" id="nwr-DA-8jh"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="1Li-3s-h5r"/>
+                                                        <exclude reference="R36-mD-buS"/>
+                                                        <exclude reference="icg-Z3-LSH"/>
+                                                        <exclude reference="nwr-DA-8jh"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="R36-mD-buS"/>
+                                                        <include reference="nwr-DA-8jh"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="1Li-3s-h5r"/>
+                                                        <include reference="icg-Z3-LSH"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBf-q5-Rea" userLabel="Button 12">
-                                                <rect key="frame" x="270" y="480" width="50" height="50"/>
+                                                <rect key="frame" x="270" y="480" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="TbG-fN-7yW"/>
-                                                    <constraint firstAttribute="height" constant="50" id="Y6l-c6-KxP"/>
+                                                    <constraint firstAttribute="height" constant="50" id="4Mj-UG-Z9Q"/>
+                                                    <constraint firstAttribute="width" constant="100" id="I5o-xm-MhA"/>
+                                                    <constraint firstAttribute="width" constant="50" id="ZCX-Zv-uY3"/>
+                                                    <constraint firstAttribute="height" constant="100" id="eps-dF-FgC"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="4Mj-UG-Z9Q"/>
+                                                        <exclude reference="I5o-xm-MhA"/>
+                                                        <exclude reference="ZCX-Zv-uY3"/>
+                                                        <exclude reference="eps-dF-FgC"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="4Mj-UG-Z9Q"/>
+                                                        <include reference="ZCX-Zv-uY3"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="I5o-xm-MhA"/>
+                                                        <include reference="eps-dF-FgC"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-Of-yzW" userLabel="Button 13">
-                                                <rect key="frame" x="350" y="600" width="50" height="50"/>
+                                                <rect key="frame" x="350" y="600" width="100" height="100"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="Uef-hx-F2y"/>
-                                                    <constraint firstAttribute="width" constant="50" id="g3b-Fj-uHs"/>
+                                                    <constraint firstAttribute="width" constant="100" id="LYI-nO-5VR"/>
+                                                    <constraint firstAttribute="height" constant="100" id="RAk-nZ-boa"/>
+                                                    <constraint firstAttribute="width" constant="50" id="h6F-ul-cjW"/>
+                                                    <constraint firstAttribute="height" constant="50" id="nTU-IO-tuG"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="light_on.png"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="LYI-nO-5VR"/>
+                                                        <exclude reference="RAk-nZ-boa"/>
+                                                        <exclude reference="h6F-ul-cjW"/>
+                                                        <exclude reference="nTU-IO-tuG"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="h6F-ul-cjW"/>
+                                                        <include reference="nTU-IO-tuG"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="LYI-nO-5VR"/>
+                                                        <include reference="RAk-nZ-boa"/>
+                                                    </mask>
+                                                </variation>
                                             </button>
                                         </subviews>
                                         <constraints>
