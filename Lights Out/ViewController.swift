@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         updateView()
     }
     
-    @IBAction func pressedNewGame(sender: Any) {
+    @IBAction func pressedNewGame(_ sender: Any) {
         game = LinearLightsOutGame(numLights: 13)
         updateView()
     }
@@ -37,6 +37,11 @@ class ViewController: UIViewController {
     func updateView() {
         var onImage: UIImage
         var offImage: UIImage
+        if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.compact) {
+            gameStateLabel.text = game.description
+        } else {
+            gameStateNavBar.topItem?.title = game.description
+        }
         onImage = #imageLiteral(resourceName: "light_on")
         offImage = #imageLiteral(resourceName: "light_off")
         

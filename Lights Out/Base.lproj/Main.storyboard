@@ -25,7 +25,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Turn all the lights off!" id="YIa-r6-3MD" userLabel="Game State Label">
-                                        <barButtonItem key="leftBarButtonItem" title="New Game" id="NQF-f4-gCH"/>
+                                        <barButtonItem key="leftBarButtonItem" title="New Game" id="NQF-f4-gCH">
+                                            <connections>
+                                                <action selector="pressedNewGame:" destination="BYZ-38-t0r" id="UlY-RU-rVv"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                                 <variation key="default">
@@ -48,7 +52,11 @@
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Zr7-8S-YcH"/>
-                                    <barButtonItem title="New Game" id="Fmj-gu-biP"/>
+                                    <barButtonItem title="New Game" id="Fmj-gu-biP">
+                                        <connections>
+                                            <action selector="pressedNewGame:" destination="BYZ-38-t0r" id="umd-Vb-R7P"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-VR-s4Z" userLabel="Usable View">
@@ -461,7 +469,7 @@
                                                     <constraint firstAttribute="width" constant="50" id="h6F-ul-cjW"/>
                                                     <constraint firstAttribute="height" constant="50" id="nTU-IO-tuG"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="LYI-nO-5VR"/>
@@ -811,7 +819,4 @@
             <point key="canvasLocation" x="135.97122302158274" y="130.57553956834533"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="light_on.png" width="100" height="100"/>
-    </resources>
 </document>
