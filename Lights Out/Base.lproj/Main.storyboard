@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad10_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,16 +15,16 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lights_Out" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQA-Vf-iNl">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQA-Vf-iNl" userLabel="Game State Navigation Bar">
                                 <rect key="frame" x="0.0" y="20" width="834" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="YO5-SI-qW2"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Turn all the lights off!" id="YIa-r6-3MD">
+                                    <navigationItem title="Turn all the lights off!" id="YIa-r6-3MD" userLabel="Game State Label">
                                         <barButtonItem key="leftBarButtonItem" title="New Game" id="NQF-f4-gCH"/>
                                     </navigationItem>
                                 </items>
@@ -45,27 +45,27 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cAO-5k-SN8">
-                                <rect key="frame" x="0.0" y="1068" width="834" height="44"/>
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Zr7-8S-YcH"/>
                                     <barButtonItem title="New Game" id="Fmj-gu-biP"/>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bZ-VR-s4Z" userLabel="Usable View">
-                                <rect key="frame" x="0.0" y="74" width="834" height="1038"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6b-aK-VFx" userLabel="Game Board">
-                                        <rect key="frame" x="167" y="169" width="500" height="700"/>
+                                        <rect key="frame" x="35" y="62" width="250" height="380"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahg-J0-eOv" userLabel="Button 1">
-                                                <rect key="frame" x="50" y="600" width="100" height="100"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahg-J0-eOv" userLabel="Button 0">
+                                                <rect key="frame" x="25" y="320" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="6Zk-iS-HP7"/>
                                                     <constraint firstAttribute="height" constant="50" id="LIp-NJ-oKj"/>
                                                     <constraint firstAttribute="width" constant="100" id="acc-9O-NRq"/>
                                                     <constraint firstAttribute="height" constant="100" id="tp8-3a-rXF"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="6Zk-iS-HP7"/>
@@ -86,16 +86,19 @@
                                                         <include reference="tp8-3a-rXF"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fg-wX-XVW"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-AK-HwJ" userLabel="Button 2">
-                                                <rect key="frame" x="50" y="480" width="100" height="100"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7n-AK-HwJ" userLabel="Button 1">
+                                                <rect key="frame" x="25" y="260" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="6eU-LG-mOp"/>
                                                     <constraint firstAttribute="height" constant="50" id="Uho-Rn-NTe"/>
                                                     <constraint firstAttribute="width" constant="50" id="d3v-8b-tl1"/>
                                                     <constraint firstAttribute="height" constant="100" id="zoh-pr-9hz"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="6eU-LG-mOp"/>
@@ -116,16 +119,19 @@
                                                         <include reference="zoh-pr-9hz"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PCf-Oq-DZ0"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts1-t1-bvD" userLabel="Button 3">
-                                                <rect key="frame" x="50" y="360" width="100" height="100"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ts1-t1-bvD" userLabel="Button 2">
+                                                <rect key="frame" x="25" y="200" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="72M-lf-Qcf"/>
                                                     <constraint firstAttribute="height" constant="100" id="ZnB-C8-BPc"/>
                                                     <constraint firstAttribute="width" constant="50" id="p19-HY-KtY"/>
                                                     <constraint firstAttribute="height" constant="50" id="yeO-yo-5PX"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="72M-lf-Qcf"/>
@@ -146,16 +152,19 @@
                                                         <include reference="ZnB-C8-BPc"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eyi-ff-vMo"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb6-2A-TRE" userLabel="Button 4">
-                                                <rect key="frame" x="50" y="240" width="100" height="100"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb6-2A-TRE" userLabel="Button 3">
+                                                <rect key="frame" x="25" y="140" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="fZr-Wt-aOG"/>
                                                     <constraint firstAttribute="width" constant="100" id="htT-qf-hws"/>
                                                     <constraint firstAttribute="height" constant="50" id="vUB-uL-ABk"/>
                                                     <constraint firstAttribute="width" constant="50" id="vZj-lv-N17"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="fZr-Wt-aOG"/>
@@ -176,16 +185,19 @@
                                                         <include reference="htT-qf-hws"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rI0-wG-TGb"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mi-99-06d" userLabel="Button 5">
-                                                <rect key="frame" x="50" y="120" width="100" height="100"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mi-99-06d" userLabel="Button 4">
+                                                <rect key="frame" x="25" y="80" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="R2Y-lJ-Nfd"/>
                                                     <constraint firstAttribute="width" constant="50" id="eny-8u-0FZ"/>
                                                     <constraint firstAttribute="height" constant="50" id="fsQ-z1-WuL"/>
                                                     <constraint firstAttribute="width" constant="100" id="qFQ-Xy-T5T"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="R2Y-lJ-Nfd"/>
@@ -206,16 +218,19 @@
                                                         <include reference="qFQ-Xy-T5T"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2X-VP-QMl"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q95-h6-wzN" userLabel="Button 6">
-                                                <rect key="frame" x="50" y="0.0" width="100" height="100"/>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q95-h6-wzN" userLabel="Button 5">
+                                                <rect key="frame" x="25" y="20" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="0wX-CC-ZP6"/>
                                                     <constraint firstAttribute="height" constant="50" id="BEC-eW-MP5"/>
                                                     <constraint firstAttribute="width" constant="50" id="KLN-bE-dSv"/>
                                                     <constraint firstAttribute="height" constant="100" id="WJZ-Ei-dj3"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="0wX-CC-ZP6"/>
@@ -236,16 +251,19 @@
                                                         <include reference="WJZ-Ei-dj3"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ag6-1u-IxA"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B35-y1-uc8" userLabel="Button 7">
-                                                <rect key="frame" x="185" y="0.0" width="100" height="100"/>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B35-y1-uc8" userLabel="Button 6">
+                                                <rect key="frame" x="95" y="20" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="0Jh-mJ-O8E"/>
                                                     <constraint firstAttribute="width" constant="100" id="Wzw-3Y-dSL"/>
                                                     <constraint firstAttribute="width" constant="50" id="nTD-Nx-02S"/>
                                                     <constraint firstAttribute="height" constant="50" id="uEK-UD-teW"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="0Jh-mJ-O8E"/>
@@ -266,16 +284,19 @@
                                                         <include reference="Wzw-3Y-dSL"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mz8-VA-8A4"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO6-mJ-YWV" userLabel="Button 8">
-                                                <rect key="frame" x="310" y="56" width="100" height="100"/>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO6-mJ-YWV" userLabel="Button 7">
+                                                <rect key="frame" x="155" y="48" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="KuR-wa-3t3"/>
                                                     <constraint firstAttribute="width" constant="100" id="QX9-1r-u1f"/>
                                                     <constraint firstAttribute="height" constant="50" id="e6u-6M-Hm1"/>
                                                     <constraint firstAttribute="height" constant="100" id="eC3-sZ-tid"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="KuR-wa-3t3"/>
@@ -296,16 +317,19 @@
                                                         <include reference="eC3-sZ-tid"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kkt-ut-cCh"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-fg-5im" userLabel="Button 9">
-                                                <rect key="frame" x="370" y="180" width="100" height="100"/>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-fg-5im" userLabel="Button 8">
+                                                <rect key="frame" x="182" y="110" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="2WK-8c-hX3"/>
                                                     <constraint firstAttribute="width" constant="100" id="MuB-ZB-t2V"/>
                                                     <constraint firstAttribute="width" constant="50" id="jGl-VK-Gxd"/>
                                                     <constraint firstAttribute="height" constant="100" id="vrr-Km-WBR"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="2WK-8c-hX3"/>
@@ -326,16 +350,19 @@
                                                         <include reference="vrr-Km-WBR"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b8E-JR-guA"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mJ-hs-iiy" userLabel="Button 10">
-                                                <rect key="frame" x="310" y="304" width="100" height="100"/>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mJ-hs-iiy" userLabel="Button 9">
+                                                <rect key="frame" x="155" y="172" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="7G8-8e-qed"/>
                                                     <constraint firstAttribute="width" constant="100" id="9wC-4t-5eL"/>
                                                     <constraint firstAttribute="height" constant="50" id="XPR-DE-kR7"/>
                                                     <constraint firstAttribute="width" constant="50" id="ZfV-PQ-Eue"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="7G8-8e-qed"/>
@@ -356,16 +383,19 @@
                                                         <include reference="9wC-4t-5eL"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eLq-jp-9CB"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-ht-y5v" userLabel="Button 11">
-                                                <rect key="frame" x="190" y="360" width="100" height="100"/>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7a-ht-y5v" userLabel="Button 10">
+                                                <rect key="frame" x="95" y="200" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="1Li-3s-h5r"/>
                                                     <constraint firstAttribute="width" constant="50" id="R36-mD-buS"/>
                                                     <constraint firstAttribute="height" constant="100" id="icg-Z3-LSH"/>
                                                     <constraint firstAttribute="height" constant="50" id="nwr-DA-8jh"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="1Li-3s-h5r"/>
@@ -386,16 +416,19 @@
                                                         <include reference="icg-Z3-LSH"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQH-M5-be6"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBf-q5-Rea" userLabel="Button 12">
-                                                <rect key="frame" x="270" y="480" width="100" height="100"/>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBf-q5-Rea" userLabel="Button 11">
+                                                <rect key="frame" x="135" y="260" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="4Mj-UG-Z9Q"/>
                                                     <constraint firstAttribute="width" constant="100" id="I5o-xm-MhA"/>
                                                     <constraint firstAttribute="width" constant="50" id="ZCX-Zv-uY3"/>
                                                     <constraint firstAttribute="height" constant="100" id="eps-dF-FgC"/>
                                                 </constraints>
-                                                <state key="normal" title="Button" image="light_on.png"/>
+                                                <state key="normal" title="Button"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="4Mj-UG-Z9Q"/>
@@ -416,9 +449,12 @@
                                                         <include reference="eps-dF-FgC"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAR-Ux-b8r"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-Of-yzW" userLabel="Button 13">
-                                                <rect key="frame" x="350" y="600" width="100" height="100"/>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBv-Of-yzW" userLabel="Button 12">
+                                                <rect key="frame" x="175" y="325" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="LYI-nO-5VR"/>
                                                     <constraint firstAttribute="height" constant="100" id="RAk-nZ-boa"/>
@@ -446,6 +482,9 @@
                                                         <include reference="RAk-nZ-boa"/>
                                                     </mask>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="pressedGameBoardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNK-95-rUU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -538,14 +577,14 @@
                                                 <exclude reference="cfj-sa-dkZ"/>
                                                 <exclude reference="jO9-gT-zgH"/>
                                                 <exclude reference="q9O-zY-dJZ"/>
-                                                <exclude reference="INN-DK-Wa7"/>
-                                                <exclude reference="Lzp-2S-6dQ"/>
-                                                <exclude reference="Q2P-4p-o93"/>
-                                                <exclude reference="fXn-8M-77n"/>
                                                 <exclude reference="5Sb-J8-8Q0"/>
                                                 <exclude reference="9ZX-Pk-fNv"/>
                                                 <exclude reference="Sz1-EL-Ue2"/>
                                                 <exclude reference="UNv-aV-xMZ"/>
+                                                <exclude reference="INN-DK-Wa7"/>
+                                                <exclude reference="Lzp-2S-6dQ"/>
+                                                <exclude reference="Q2P-4p-o93"/>
+                                                <exclude reference="fXn-8M-77n"/>
                                                 <exclude reference="Ahh-z8-oHO"/>
                                                 <exclude reference="Nl9-WI-3aB"/>
                                                 <exclude reference="jzi-nG-b1R"/>
@@ -584,10 +623,10 @@
                                                 <include reference="hj2-Ob-GdP"/>
                                                 <include reference="cfj-sa-dkZ"/>
                                                 <include reference="q9O-zY-dJZ"/>
-                                                <include reference="Lzp-2S-6dQ"/>
-                                                <include reference="fXn-8M-77n"/>
                                                 <include reference="9ZX-Pk-fNv"/>
                                                 <include reference="UNv-aV-xMZ"/>
+                                                <include reference="Lzp-2S-6dQ"/>
+                                                <include reference="fXn-8M-77n"/>
                                                 <include reference="Nl9-WI-3aB"/>
                                                 <include reference="jzi-nG-b1R"/>
                                                 <include reference="FF4-74-wf6"/>
@@ -616,10 +655,10 @@
                                                 <include reference="PKu-1B-kcU"/>
                                                 <include reference="FVE-z7-XdW"/>
                                                 <include reference="jO9-gT-zgH"/>
-                                                <include reference="INN-DK-Wa7"/>
-                                                <include reference="Q2P-4p-o93"/>
                                                 <include reference="5Sb-J8-8Q0"/>
                                                 <include reference="Sz1-EL-Ue2"/>
+                                                <include reference="INN-DK-Wa7"/>
+                                                <include reference="Q2P-4p-o93"/>
                                                 <include reference="Ahh-z8-oHO"/>
                                                 <include reference="o0P-ZH-sYi"/>
                                                 <include reference="a9i-Uz-9uq"/>
@@ -633,8 +672,8 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn all the lights off!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-Zb-BcA">
-                                        <rect key="frame" x="126" y="8" width="162" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn all the lights off!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Za1-Zb-BcA" userLabel="Game State Label">
+                                        <rect key="frame" x="79" y="8" width="162" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -749,6 +788,23 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="gameStateLabel" destination="Za1-Zb-BcA" id="iKI-yg-HJc"/>
+                        <outlet property="gameStateNavBar" destination="LQA-Vf-iNl" id="hxx-wO-9Dy"/>
+                        <outletCollection property="gameBoardButtons" destination="ahg-J0-eOv" collectionClass="NSMutableArray" id="nOH-cG-yvG"/>
+                        <outletCollection property="gameBoardButtons" destination="s7n-AK-HwJ" collectionClass="NSMutableArray" id="d9r-RC-kiX"/>
+                        <outletCollection property="gameBoardButtons" destination="Ts1-t1-bvD" collectionClass="NSMutableArray" id="tSC-us-z30"/>
+                        <outletCollection property="gameBoardButtons" destination="Sb6-2A-TRE" collectionClass="NSMutableArray" id="ogR-ZS-0y3"/>
+                        <outletCollection property="gameBoardButtons" destination="6mi-99-06d" collectionClass="NSMutableArray" id="i3o-Fy-NLL"/>
+                        <outletCollection property="gameBoardButtons" destination="q95-h6-wzN" collectionClass="NSMutableArray" id="3r7-yJ-BOp"/>
+                        <outletCollection property="gameBoardButtons" destination="B35-y1-uc8" collectionClass="NSMutableArray" id="7F9-1t-StO"/>
+                        <outletCollection property="gameBoardButtons" destination="mO6-mJ-YWV" collectionClass="NSMutableArray" id="d9u-Nn-MPk"/>
+                        <outletCollection property="gameBoardButtons" destination="P4O-fg-5im" collectionClass="NSMutableArray" id="PV9-SN-vJ6"/>
+                        <outletCollection property="gameBoardButtons" destination="5mJ-hs-iiy" collectionClass="NSMutableArray" id="l9d-qw-N2h"/>
+                        <outletCollection property="gameBoardButtons" destination="V7a-ht-y5v" collectionClass="NSMutableArray" id="fug-uO-pfl"/>
+                        <outletCollection property="gameBoardButtons" destination="MBf-q5-Rea" collectionClass="NSMutableArray" id="cTH-kD-7Dn"/>
+                        <outletCollection property="gameBoardButtons" destination="zBv-Of-yzW" collectionClass="NSMutableArray" id="sfO-Bl-sYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
