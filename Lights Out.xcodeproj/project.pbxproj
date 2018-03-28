@@ -20,7 +20,7 @@
 		94BF33C020602A6000AF762F /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BF33B820602A5F00AF762F /* Icon-Small-50@2x.png */; };
 		94BF33C120602A6000AF762F /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BF33B920602A6000AF762F /* Icon@2x.png */; };
 		94BF33C220602A6000AF762F /* iconBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 94BF33BA20602A6000AF762F /* iconBig.png */; };
-		94D1DF15205CA6B700C3D0E6 /* LinearLightsOutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1DF14205CA6B700C3D0E6 /* LinearLightsOutGame.swift */; };
+		94DB4F8B206C209500303D9A /* LinearLightsOutGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DB4F89206C209400303D9A /* LinearLightsOutGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,9 @@
 		94BF33B820602A5F00AF762F /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "../../../../../../../../Downloads/LightsOutImages/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
 		94BF33B920602A6000AF762F /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../../../../../../../../Downloads/LightsOutImages/Icon@2x.png"; sourceTree = "<group>"; };
 		94BF33BA20602A6000AF762F /* iconBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconBig.png; path = ../../../../../../../../Downloads/LightsOutImages/iconBig.png; sourceTree = "<group>"; };
-		94D1DF14205CA6B700C3D0E6 /* LinearLightsOutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearLightsOutGame.swift; sourceTree = "<group>"; };
+		94DB4F88206C209400303D9A /* Lights Out-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lights Out-Bridging-Header.h"; sourceTree = "<group>"; };
+		94DB4F89206C209400303D9A /* LinearLightsOutGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinearLightsOutGame.m; sourceTree = "<group>"; };
+		94DB4F8A206C209400303D9A /* LinearLightsOutGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearLightsOutGame.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,9 @@
 				9466B4D1205C16B2002755D3 /* Assets.xcassets */,
 				9466B4D3205C16B2002755D3 /* LaunchScreen.storyboard */,
 				9466B4D6205C16B2002755D3 /* Info.plist */,
-				94D1DF14205CA6B700C3D0E6 /* LinearLightsOutGame.swift */,
+				94DB4F88206C209400303D9A /* Lights Out-Bridging-Header.h */,
+				94DB4F8A206C209400303D9A /* LinearLightsOutGame.h */,
+				94DB4F89206C209400303D9A /* LinearLightsOutGame.m */,
 			);
 			path = "Lights Out";
 			sourceTree = "<group>";
@@ -131,6 +135,7 @@
 				TargetAttributes = {
 					9466B4C6205C16B2002755D3 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -179,9 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D1DF15205CA6B700C3D0E6 /* LinearLightsOutGame.swift in Sources */,
 				9466B4CD205C16B2002755D3 /* ViewController.swift in Sources */,
 				9466B4CB205C16B2002755D3 /* AppDelegate.swift in Sources */,
+				94DB4F8B206C209500303D9A /* LinearLightsOutGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,12 +323,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 582V4DL5CW;
 				INFOPLIST_FILE = "Lights Out/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rosehulman.greenlrt.Lights-Out";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lights Out/Lights Out-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,12 +341,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 582V4DL5CW;
 				INFOPLIST_FILE = "Lights Out/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.rosehulman.greenlrt.Lights-Out";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lights Out/Lights Out-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

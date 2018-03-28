@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     
     @IBAction func pressedGameBoardButton(_ sender: Any) {
         let gameBoardButton = sender as! UIButton
-        game.pressedLightAtIndex(gameBoardButton.tag)
+        game?.pressedLight(at: gameBoardButton.tag)
         updateView()
     }
     
@@ -38,20 +38,22 @@ class ViewController: UIViewController {
         var onImage: UIImage
         var offImage: UIImage
         if (traitCollection.horizontalSizeClass == UIUserInterfaceSizeClass.compact) {
-            gameStateLabel.text = game.description
+            gameStateLabel.text = game?.description
         } else {
-            gameStateNavBar.topItem?.title = game.description
+            gameStateNavBar.topItem?.title = game?.description
         }
         onImage = #imageLiteral(resourceName: "light_on")
         offImage = #imageLiteral(resourceName: "light_off")
         
         for i in 0..<13 {
             let button = gameBoardButtons[i]
-            switch (game.lightStates[i]) {
-            case true:
+            switch (game?.isLightOn(at: i)) {
+            case true?:
                 button.setImage(onImage, for: UIControlState.normal)
-            case false:
+            case false?:
                 button.setImage(offImage, for: UIControlState.normal)
+            case .none:
+                break;
             }
         }
     }
